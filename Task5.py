@@ -4,13 +4,9 @@
 
 A = int(input("Enter number:  "))
 B = 0
-for item in A:
-    if A // 10 != 0:
-        B += A//10 * 10
+q = len(str(A))-1
+while A > 0:
+    B += A % 10 * 10**q
+    A = A // 10
+    q -= 1
 print(B)
-
-
-# while A // 10 != 0:
-#     B += A % 10
-#     A = A // 10
-# print(B)
